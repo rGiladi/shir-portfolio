@@ -1,0 +1,13 @@
+.app-container {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 92.5%;
+    }
+
+    @include mobile {
+        width: 95%;
+    }
+}

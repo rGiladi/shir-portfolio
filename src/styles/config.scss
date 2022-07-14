@@ -1,20 +1,28 @@
+$desktop-max: 1560px;
+$desktop-padding-x: 84px;
 
+// colors
+$white: #fff;
+$black: #15151b;
+$pastel-cyan: #e9f6ff;
+$pastel-purple: #ececff;
+$pastel-orange: #fff3e2;
 
 // use this mixin to include breakpoint specific styles
 @mixin breakpoint($width) {
-    @media screen and (max-width: $width) {
-        @content;
-    }
+  @media screen and (max-width: $width) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @include breakpoint(25em) {
-        @content;
-    }
+  @include breakpoint(25em) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @include breakpoint(50em) {
-        @content;
-    }
+  @include breakpoint(50em) {
+    @content;
+  }
 }

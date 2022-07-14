@@ -1,0 +1,146 @@
+#home {
+  background: #fff;
+  color: #15151b;
+  text-align: start;
+
+  @include tablet {
+    text-align: center;
+  }
+}
+
+.home--hero {
+  position: relative;
+  height: calc(100vh - 82px);
+  min-height: 500px;
+  overflow-x: hidden;
+
+  & .app-container {
+    display: grid;
+    align-items: center;
+    height: inherit;
+  }
+
+  & .home--hero--title-container {
+    position: relative;
+    top: -5rem;
+    z-index: 1;
+
+    @include tablet {
+      top: 3rem;
+    }
+
+    .home--hero--title {
+      font-size: 8rem;
+      font-family: var(--ff-primary);
+      font-weight: var(--fw-light);
+      margin-block-end: 2.5rem;
+
+      @include tablet {
+        margin-block-end: 1.5rem;
+        font-size: 4.8rem;
+      }
+
+      & > span:first-child {
+        font-weight: 300;
+      }
+
+      & > span:last-child {
+        font-weight: 700;
+      }
+    }
+
+    .home--hero--description {
+      font-size: 3.6rem;
+      font-family: var(--ff-primary);
+      font-weight: var(--fw-light);
+      margin-block-end: 2.5rem;
+      line-height: 4.59rem;
+
+      @include tablet {
+        font-size: 2.4rem;
+        line-height: 3.06rem;
+      }
+    }
+  }
+
+  .home--hero--vector {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    pointer-events: none;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .home--hero--vector-mobile {
+    display: none;
+    position: relative;
+    right: -85px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+#projects {
+  & > .app-container {
+    margin-block-start: 6.4rem;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+.home--project {
+  min-height: 84rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+
+  @include tablet {
+    min-height: initial;
+    padding-left: 2.9rem;
+    padding-right: 2.9rem;
+  }
+
+  &.home--project--wsc {
+    background-color: $pastel-cyan;
+  }
+
+  &.home--project--reflect {
+    background-color: $pastel-purple;
+  }
+
+  &.home--project--slowdown {
+    background-color: $pastel-orange;
+  }
+
+  .home--project--content-container {
+    max-width: 50.7rem;
+    padding-top: 20rem;
+
+    @include tablet {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      max-width: initial;
+    }
+  }
+
+  .home--project--main-description {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Montserrat';
+    line-height: 3rem;
+  }
+
+  .home--project--button {
+    width: 20rem;
+    margin-block-start: 5rem;
+    margin-block-end: 9rem;
+    box-sizing: border-box;
+  }
+}

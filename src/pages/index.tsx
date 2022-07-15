@@ -49,10 +49,10 @@ const IndexPage = () => {
               </div>
               <div className='home--project--asset-container'>
                 <StaticImage
-                  src='../images/wsc--desktop-with-river.png'
+                  src='../images/wsc--desktop-river.png'
                   alt='wsc project asset'
                   layout='constrained'
-                  placeholder='blurred'
+                  placeholder='tracedSVG'
                   width={666}
                   height={697}
                   quality={100}
@@ -90,23 +90,10 @@ const IndexPage = () => {
               </div>
               <div className='home--project--asset-container'>
                 <StaticImage
-                  className='home--project--reflect--mobile-screens'
-                  src='../images/reflect--screens-mobile.png'
+                  src='../images/reflect-screens.png'
                   alt='reflect project asset - screens'
-                  layout='constrained'
+                  layout='fullWidth'
                   placeholder='blurred'
-                  width={406}
-                  height={180}
-                  quality={100}
-                />
-                <StaticImage
-                  className='home--project--reflect--desktop-screens'
-                  src='../images/reflect--screens-desktop.png'
-                  alt='reflect project asset - screens'
-                  layout='constrained'
-                  placeholder='blurred'
-                  width={639}
-                  height={220}
                   quality={100}
                 />
                 <StaticImage
@@ -114,8 +101,8 @@ const IndexPage = () => {
                   alt='reflect project asset - mobile phones'
                   layout='constrained'
                   placeholder='blurred'
-                  width={640}
-                  height={531}
+                  width={550}
+                  height={500}
                   quality={100}
                 />
               </div>
@@ -142,7 +129,7 @@ const IndexPage = () => {
                   src='../images/slowdown--mockup-mobile.png'
                   alt='slowdown project asset - mobile phones mockups'
                   layout='fixed'
-                  placeholder='blurred'
+                  placeholder='tracedSVG'
                   width={400}
                   height={749}
                   quality={100}
@@ -152,7 +139,7 @@ const IndexPage = () => {
                   src='../images/slowdown--mockup.png'
                   alt='slowdown project asset - mobile phones mockups'
                   layout='fixed'
-                  placeholder='blurred'
+                  placeholder='tracedSVG'
                   width={540}
                   height={1247}
                   quality={100}

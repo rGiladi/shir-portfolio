@@ -122,20 +122,6 @@
 
     &.home--project--reflect {
       background-color: $pastel-purple-blue;
-
-      & .home--project--reflect--mobile-screens {
-        display: none;
-
-        @include tablet {
-          display: initial;
-        }
-      }
-
-      & .home--project--reflect--desktop-screens {
-        @include tablet {
-          display: none;
-        }
-      }
     }
 
     &.home--project--slowdown {
@@ -363,6 +349,8 @@
   transition: bottom 0.3s ease;
 
   @include mobile {
+    width: 7rem;
+    height: 7rem;
     right: 2rem;
     bottom: 2rem;
   }

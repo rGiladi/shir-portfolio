@@ -6,8 +6,6 @@ import InstagramIcon from '../../assets/svgs/instagram.svg'
 import FacebookIcon from 'assets/svgs/facebook.svg'
 import LinkedinIcon from 'assets/svgs/linkedin.svg'
 
-console.log(InstagramIcon)
-
 const Footer = () => {
   return (
     <footer>

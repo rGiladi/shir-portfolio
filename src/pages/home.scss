@@ -10,15 +10,13 @@
 
 .home--hero {
   position: relative;
-  max-height: 90rem;
-  min-height: 60rem;
-  height: calc(100vh - 82px);
   overflow: hidden;
 
   & .app-container {
     display: grid;
     align-items: center;
-    height: 100%;
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 82px);
 
     @include tablet {
       display: initial;

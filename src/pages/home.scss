@@ -235,6 +235,10 @@
   padding-block-start: 27.9rem;
   text-align: center;
 
+  @include tablet {
+    padding-block-start: 5.4rem;
+  }
+
   & > .app-container {
     @include tablet {
       width: 95%;
@@ -252,6 +256,7 @@
     }
 
     @include tablet {
+      padding-block-start: 3rem;
       // display: flex;
       // flex-flow: column;
 

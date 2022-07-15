@@ -5,11 +5,22 @@ footer {
   min-height: 20rem;
 
   .footer--content {
-    max-width: 50rem;
+    position: relative;
     margin: 15rem auto;
   }
 
+  .footer--title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      flex-flow: column-reverse;
+    }
+  }
+
   .footer--title {
+    max-width: 50rem;
     color: $black;
     font-size: 6.4rem;
     font-weight: var(--fw-bold);
@@ -19,6 +30,74 @@ footer {
     @include tablet {
       font-size: 4.8rem;
       line-height: 6rem;
+    }
+  }
+
+  .footer--content-avatar {
+    margin-right: 4rem;
+
+    @include tablet {
+      margin-block-start: 4rem;
+      margin-right: 0;
+    }
+
+    & .gatsby-image-wrapper {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+
+      @include tablet {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+
+  .footer--details {
+    position: relative;
+    left: 13rem;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-start: 8rem;
+
+    @include tablet {
+      left: initial;
+      margin-block-start: 3rem;
+    }
+
+    a {
+      color: $black;
+    }
+
+    & .footer--details-email {
+      &:hover {
+        color: #a58af5;
+      }
+    }
+
+    .footer--details-social {
+      margin-block-start: 3rem;
+
+      & > :not(:first-child) {
+        margin-left: 3.7rem;
+      }
+
+      & svg {
+        cursor: pointer;
+
+        &.instagram-icon:hover {
+          color: #fb3958;
+        }
+
+        &.facebook-icon:hover {
+          color: rgb(24, 119, 242);
+        }
+
+        &.linkedin-icon:hover {
+          color: #0a66c2;
+        }
+      }
     }
   }
 }

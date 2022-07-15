@@ -10,23 +10,28 @@
 
 .home--hero {
   position: relative;
+  max-height: 90rem;
+  min-height: 60rem;
   height: calc(100vh - 82px);
-  min-height: 500px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   & .app-container {
     display: grid;
     align-items: center;
-    height: inherit;
+    height: 100%;
+
+    @include tablet {
+      display: initial;
+    }
   }
 
   & .home--hero--title-container {
-    position: relative;
-    top: -5rem;
+    margin-block-start: -10rem;
     z-index: 1;
 
     @include tablet {
-      top: 3rem;
+      margin-block-start: 8rem;
+      margin-block-end: 8rem;
     }
 
     .home--hero--title {
@@ -77,7 +82,9 @@
   .home--hero--vector-mobile {
     display: none;
     position: relative;
-    right: -85px;
+    right: -25%;
+    min-width: 45rem;
+    max-width: 55rem;
 
     @include tablet {
       display: block;
@@ -93,54 +100,266 @@
       width: 100%;
     }
   }
-}
 
-.home--project {
-  min-height: 84rem;
-  padding-left: 12rem;
-  padding-right: 12rem;
+  .home--project {
+    $home--project-padding: 8rem;
 
-  @include tablet {
-    min-height: initial;
-    padding-left: 2.9rem;
-    padding-right: 2.9rem;
-  }
-
-  &.home--project--wsc {
-    background-color: $pastel-cyan;
-  }
-
-  &.home--project--reflect {
-    background-color: $pastel-purple;
-  }
-
-  &.home--project--slowdown {
-    background-color: $pastel-orange;
-  }
-
-  .home--project--content-container {
-    max-width: 50.7rem;
-    padding-top: 20rem;
+    display: flex;
+    justify-content: space-between;
+    min-height: 84rem;
+    padding-left: $home--project-padding;
+    padding-right: $home--project-padding;
 
     @include tablet {
+      flex-flow: column-reverse;
+      min-height: initial;
+      padding-left: 2.9rem;
+      padding-right: 2.9rem;
+      padding-block-start: 7rem;
+    }
+
+    &.home--project--wsc {
+      background-color: $pastel-green;
+    }
+
+    &.home--project--reflect {
+      background-color: $pastel-purple-blue;
+
+      & .home--project--reflect--mobile-screens {
+        display: none;
+
+        @include tablet {
+          display: initial;
+        }
+      }
+
+      & .home--project--reflect--desktop-screens {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    &.home--project--slowdown {
+      position: relative;
+      overflow: hidden;
+      background-color: $pastel-purple;
+
+      & .home--project--asset-container {
+        position: absolute;
+        right: $home--project-padding;
+
+        & .home--project--slowdown--mobile-asset {
+          display: none;
+        }
+
+        @media screen and (max-width: 80em) {
+          right: -15%;
+        }
+
+        @include tablet {
+          position: relative;
+          right: 5rem;
+
+          & .home--project--slowdown--mobile-asset {
+            display: initial;
+          }
+
+          & .home--project--slowdown--desktop-asset {
+            display: none;
+          }
+        }
+
+        @include mobile {
+          position: initial;
+          right: unset;
+          min-height: 60rem;
+
+          & .gatsby-image-wrapper {
+            position: absolute;
+            top: -12rem;
+            left: -7rem;
+            height: 749px !important;
+            width: 400px !important;
+            transform: rotate(44.57deg);
+          }
+        }
+      }
+    }
+
+    .home--project--content-container {
+      max-width: 50.7rem;
+      min-width: 40rem;
+      padding-block-start: 20rem;
+      flex: 1;
+
+      @include tablet {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        max-width: initial;
+        min-width: initial;
+        padding-block-start: 0;
+      }
+
+      .home--project--main-description {
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'Montserrat';
+        line-height: 3rem;
+      }
+
+      .home--project--button {
+        width: 20rem;
+        margin-block-start: 5rem;
+        margin-block-end: 9rem;
+        box-sizing: border-box;
+
+        @include tablet {
+          margin-block-end: 9rem;
+        }
+      }
+    }
+
+    .home--project--asset-container {
       display: flex;
       flex-flow: column;
-      align-items: center;
-      max-width: initial;
+      align-self: center;
+
+      @include tablet {
+        max-width: 40rem;
+      }
+    }
+  }
+}
+
+#logos-and-icons {
+  padding-block-start: 27.9rem;
+  text-align: center;
+
+  & > .app-container {
+    @include tablet {
+      width: 95%;
     }
   }
 
-  .home--project--main-description {
-    font-size: 2rem;
-    font-weight: 300;
-    font-family: 'Montserrat';
-    line-height: 3rem;
-  }
+  .landI--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 30.7rem);
+    grid-gap: 2rem;
+    padding-block-start: 12.3rem;
 
-  .home--project--button {
-    width: 20rem;
-    margin-block-start: 5rem;
-    margin-block-end: 9rem;
-    box-sizing: border-box;
+    @include desktop {
+    }
+
+    @include tablet {
+      // display: flex;
+      // flex-flow: column;
+
+      // & > div {
+      //   min-height: 30.7rem;
+      //   width: 100%;
+      // }
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & > :nth-child(1) {
+      background: $pastel-green;
+    }
+
+    & > :nth-child(2) {
+      grid-column: 2 / 4;
+      background: $pastel-purple;
+    }
+
+    & > div:nth-child(3) {
+      background: $pastel-purple;
+    }
+
+    & > div:nth-child(4) {
+      background: $pastel-purple-blue;
+    }
+
+    & > :nth-child(5) {
+      background: $pastel-purple;
+    }
+
+    & > :nth-child(6) {
+      grid-column: 1 / 4;
+      background: $pastel-purple-blue;
+    }
+
+    & > :nth-child(7) {
+      background: $pastel-purple;
+    }
+
+    & > :nth-child(8) {
+      background: $pastel-green;
+    }
+
+    & > :nth-child(9) {
+      background: $pastel-purple;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 30.7rem) 11.4rem;
+      grid-gap: 1.5rem;
+
+      & > div,
+      & > :nth-child(2) {
+        grid-column: 1 / 4;
+      }
+
+      & > :nth-child(7),
+      & > :nth-child(8),
+      & > :nth-child(9) {
+        grid-column: initial;
+      }
+    }
+
+    & .landI--grid--food-icons {
+      & > svg {
+        width: 90%;
+      }
+    }
+
+    & .landI--grid--guitar-icon {
+      & > svg {
+        height: 70%;
+      }
+    }
+
+    & .landI--grid--sax-icon {
+      & > svg {
+        height: 60%;
+      }
+    }
+  }
+}
+
+#scroll-up-button {
+  position: fixed;
+  right: 5rem;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  background: $black;
+  color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: bottom 0.3s ease;
+
+  &.hidden {
+    bottom: -100px;
   }
 }

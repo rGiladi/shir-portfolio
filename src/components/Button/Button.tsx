@@ -18,7 +18,7 @@ const Button = (props: ButtonProps) => {
   if (href) {
     _className += ` btn-link`
     return (
-      <a className={_className} href={href} role='button'>
+      <a className={_className} href={href} role='button' target='__blank'>
         {children}
       </a>
     )

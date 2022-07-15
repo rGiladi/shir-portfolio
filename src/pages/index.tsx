@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import './home.scss'
+import { StaticImage } from 'gatsby-plugin-image'
 import Layout from 'components/Layout/Layout'
 import Header from 'components/Header/Header'
 import Button from 'components/Button/Button'
 import Footer from 'components/Footer/Footer'
+import FoodIcons from 'assets/svgs/food-icons.svg'
+import GuitarIcon from 'assets/svgs/guitar.svg'
+import SaxIcon from 'assets/svgs/sax.svg'
+import ChevronUpIcon from 'assets/svgs/chevron-up.svg'
 
 const IndexPage = () => {
   return (
@@ -35,7 +40,23 @@ const IndexPage = () => {
                   sustainability project for puriyfying runoff water across the
                   city.
                 </p>
-                <Button className='home--project--button'>Explore</Button>
+                <Button
+                  className='home--project--button'
+                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                >
+                  Explore
+                </Button>
+              </div>
+              <div className='home--project--asset-container'>
+                <StaticImage
+                  src='../images/wsc--desktop-with-river.png'
+                  alt='wsc project asset'
+                  layout='constrained'
+                  placeholder='blurred'
+                  width={666}
+                  height={697}
+                  quality={100}
+                />
               </div>
             </section>
           </Layout>
@@ -60,7 +81,43 @@ const IndexPage = () => {
                     </a>
                   </p>
                 </div>
-                <Button className='home--project--button'>Explore</Button>
+                <Button
+                  className='home--project--button'
+                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                >
+                  Explore
+                </Button>
+              </div>
+              <div className='home--project--asset-container'>
+                <StaticImage
+                  className='home--project--reflect--mobile-screens'
+                  src='../images/reflect--screens-mobile.png'
+                  alt='reflect project asset - screens'
+                  layout='constrained'
+                  placeholder='blurred'
+                  width={406}
+                  height={180}
+                  quality={100}
+                />
+                <StaticImage
+                  className='home--project--reflect--desktop-screens'
+                  src='../images/reflect--screens-desktop.png'
+                  alt='reflect project asset - screens'
+                  layout='constrained'
+                  placeholder='blurred'
+                  width={639}
+                  height={220}
+                  quality={100}
+                />
+                <StaticImage
+                  src='../images/reflect--phones.png'
+                  alt='reflect project asset - mobile phones'
+                  layout='constrained'
+                  placeholder='blurred'
+                  width={640}
+                  height={531}
+                  quality={100}
+                />
               </div>
             </section>
           </Layout>
@@ -72,13 +129,97 @@ const IndexPage = () => {
                   A website with one goal in mind - to lower everyone's stress
                   level. It includes articles about mind & body health.
                 </p>
-                <Button className='home--project--button'>Explore</Button>
+                <Button
+                  className='home--project--button'
+                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                >
+                  Explore
+                </Button>
+              </div>
+              <div className='home--project--asset-container'>
+                <StaticImage
+                  className='home--project--slowdown--mobile-asset'
+                  src='../images/slowdown--mockup-mobile.png'
+                  alt='slowdown project asset - mobile phones mockups'
+                  layout='fixed'
+                  placeholder='blurred'
+                  width={400}
+                  height={749}
+                  quality={100}
+                />
+                <StaticImage
+                  className='home--project--slowdown--desktop-asset'
+                  src='../images/slowdown--mockup.png'
+                  alt='slowdown project asset - mobile phones mockups'
+                  layout='fixed'
+                  placeholder='blurred'
+                  width={540}
+                  height={1247}
+                  quality={100}
+                />
               </div>
             </section>
           </Layout>
         </div>
+        <div id='logos-and-icons'>
+          <Layout>
+            <h2 className='primary-title'>Logos & Icons</h2>
+            <div className='landI--grid'>
+              <div></div>
+              <div></div>
+              <div className='landI--grid--food-icons'>
+                <FoodIcons />
+              </div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div className='landI--grid--guitar-icon'>
+                <GuitarIcon />
+              </div>
+              <div></div>
+              <div className='landI--grid--sax-icon'>
+                <SaxIcon />
+              </div>
+            </div>
+          </Layout>
+        </div>
       </main>
       <Footer />
+      <ScrollUpButton />
+    </div>
+  )
+}
+
+const ScrollUpButton = () => {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const onScroll = () => {
+      const bodyHeight = document.body.scrollHeight
+
+      if (window.scrollY > bodyHeight / 2) {
+        ref.current?.classList.remove('hidden')
+      } else {
+        ref.current?.classList.add('hidden')
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    setTimeout(onScroll, 100)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      id='scroll-up-button'
+      className='hidden'
+      onClick={() => window.scrollTo({ top: 0, behavior: 'auto' })}
+    >
+      <ChevronUpIcon />
     </div>
   )
 }
@@ -96,9 +237,9 @@ const HeroVector = () => {
       <path
         d='M230.23 814C231.279 769.485 232.308 724.656 225.017 680.728C214.876 619.63 185.645 548.659 120.929 529.002C43.728 505.555 -21.4537 581.287 17.7427 652.658C36.8162 687.393 72.9344 707.417 109.677 718.705C333.151 787.364 586.545 651.455 673.886 439.251C727.029 310.137 723.465 145.106 604.585 53.3281C535.57 0.0487938 437.463 -11.243 362.259 34.8781C280.955 84.7373 249.83 189.07 271.553 278.879C294.505 373.779 380.055 443.674 470.793 471.418C636.012 521.941 795.683 482.353 930.508 394.5M230.23 814L242.865 801L255.5 788M230.23 814L206.5 788'
         stroke='url(#paint0_linear_285_220)'
-        stroke-width='10'
-        stroke-miterlimit='10'
-        stroke-linecap='round'
+        strokeWidth='10'
+        strokeMiterlimit='10'
+        strokeLinecap='round'
       />
       <defs>
         <linearGradient
@@ -109,14 +250,10 @@ const HeroVector = () => {
           y2='184.556'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#9171ED' />
-          <stop offset='0.192708' stop-color='#B59DFA' />
-          <stop
-            offset='0.601562'
-            stop-color='#7FB2FF'
-            stop-opacity='0.404327'
-          />
-          <stop offset='0.885706' stop-color='white' stop-opacity='0' />
+          <stop stopColor='#9171ED' />
+          <stop offset='0.192708' stopColor='#B59DFA' />
+          <stop offset='0.601562' stopColor='#7FB2FF' stopOpacity='0.404327' />
+          <stop offset='0.885706' stopColor='white' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>
@@ -146,14 +283,10 @@ const HeroVectorMobile = () => {
           y2='117.177'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#9171ED' />
-          <stop offset='0.192708' stop-color='#B59DFA' />
-          <stop
-            offset='0.601562'
-            stop-color='#7FB2FF'
-            stop-opacity='0.404327'
-          />
-          <stop offset='0.802083' stop-color='white' stop-opacity='0' />
+          <stop stopColor='#9171ED' />
+          <stop offset='0.192708' stopColor='#B59DFA' />
+          <stop offset='0.601562' stopColor='#7FB2FF' stopOpacity='0.404327' />
+          <stop offset='0.802083' stopColor='white' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>

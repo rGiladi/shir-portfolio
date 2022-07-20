@@ -29,8 +29,14 @@ $pastel-green: #e3f7f4;
   }
 }
 
+@mixin laptop {
+  @include breakpoint(75em) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 75em) {
     @content;
   }
 }

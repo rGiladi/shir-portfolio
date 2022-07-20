@@ -11,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;700&family=Montserrat:wght@300;400&display=swap" />
     
         {props.headComponents}

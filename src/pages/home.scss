@@ -121,10 +121,60 @@
 
     &.home--project--wsc {
       background-color: $pastel-green;
+      overflow: hidden;
+
+      & .home--project--content-container {
+        @include desktop {
+          flex: auto;
+          min-width: initial;
+        }
+
+        @include tablet {
+          margin-block-start: 3rem;
+        }
+      }
+
+      & .home--project--asset-container {
+        position: relative;
+        right: -3rem;
+
+        @include desktop {
+          min-width: 50rem;
+        }
+
+        @include laptop {
+          right: 0;
+          min-width: 40rem;
+        }
+
+        @include tablet {
+          min-width: initial;
+        }
+      }
+
+      & .wsc--butterfly {
+        position: absolute;
+        bottom: 59%;
+        left: -68px;
+        width: 17.5rem;
+        height: 9.9rem;
+        transform: rotate(90deg);
+
+        @include laptop {
+          left: -40px;
+          width: 9.8rem;
+          height: 5.5rem;
+        }
+      }
     }
 
     &.home--project--reflect {
       background-color: $pastel-purple-blue;
+
+      & .home--project--reflect-phones {
+        width: 64rem;
+        max-width: 100%;
+      }
     }
 
     &.home--project--slowdown {
@@ -180,6 +230,10 @@
       padding-block-start: 20rem;
       flex: 1;
 
+      @include laptop {
+        margin-right: 3rem;
+      }
+
       @include tablet {
         display: flex;
         flex-flow: column;
@@ -187,6 +241,7 @@
         max-width: initial;
         min-width: initial;
         padding-block-start: 0;
+        margin-right: 0;
       }
 
       .home--project--main-description {
@@ -240,9 +295,6 @@
     grid-template-rows: repeat(4, 30.7rem);
     grid-gap: 2rem;
     padding-block-start: 12.3rem;
-
-    @include desktop {
-    }
 
     @include tablet {
       padding-block-start: 3rem;

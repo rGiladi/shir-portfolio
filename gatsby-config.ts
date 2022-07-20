@@ -12,7 +12,16 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          quality: 100,
+          breakpoints: [560, 960, 1400]
+        },
+        defaultQuality: 100
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-alias-imports',
     {

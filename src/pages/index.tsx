@@ -7,6 +7,7 @@ import Header from 'components/Header/Header'
 import Button from 'components/Button/Button'
 import Footer from 'components/Footer/Footer'
 import ShlaggerGIF from 'images/shlagger.gif'
+import reflectPhones from 'images/reflect-mockup-phones.png'
 import FoodIcons from 'assets/svgs/food-icons.svg'
 import GuitarIcon from 'assets/svgs/guitar.svg'
 import SaxIcon from 'assets/svgs/sax.svg'
@@ -52,13 +53,18 @@ const IndexPage = () => {
               </div>
               <div className='home--project--asset-container'>
                 <StaticImage
-                  src='../images/wsc--desktop-river.png'
+                  src='../images/wsc-project.png'
                   alt='wsc project asset'
-                  layout='constrained'
                   placeholder='tracedSVG'
                   width={666}
-                  height={697}
+                  height={677}
                   quality={100}
+                  imgStyle={{ objectFit: 'contain' }}
+                />
+                <Lottie
+                  className='wsc--butterfly'
+                  path='https://assets6.lottiefiles.com/packages/lf20_omronjdd.json'
+                  play
                 />
               </div>
             </section>
@@ -99,14 +105,10 @@ const IndexPage = () => {
                   placeholder='blurred'
                   quality={100}
                 />
-                <StaticImage
-                  src='../images/reflect--phones.png'
-                  alt='reflect project asset - mobile phones'
-                  layout='constrained'
-                  placeholder='blurred'
-                  width={550}
-                  height={500}
-                  quality={100}
+                <img
+                  className='home--project--reflect-phones'
+                  src={reflectPhones}
+                  alt='reflect project asset - mock phones'
                 />
               </div>
             </section>
@@ -169,7 +171,7 @@ const IndexPage = () => {
                 <Lottie
                   path='https://assets8.lottiefiles.com/packages/lf20_yqgkwlha.json'
                   play
-                  style={{ height: '120%' }}
+                  style={{ height: '130%' }}
                   rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
               </div>

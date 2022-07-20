@@ -29,13 +29,19 @@ const Footer = () => {
               shirv3@gmail.com
             </a>
             <div className='footer--details-social'>
-              <a href='' target='__blank'>
+              <a
+                href='https://www.linkedin.com/in/shir-voldman-879838229'
+                target='__blank'
+              >
                 <LinkedinIcon className='linkedin-icon' />
               </a>
-              <a href='' target='__blank'>
+              <a
+                href='https://www.instagram.com/shir_voldman/?hl=en'
+                target='__blank'
+              >
                 <InstagramIcon className='instagram-icon' />
               </a>
-              <a href='' target='__blank'>
+              <a href='https://www.facebook.com/shir.voldman' target='__blank'>
                 <FacebookIcon className='facebook-icon' />
               </a>
             </div>

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useEffect, useState, useRef } from 'react'
 import './home.scss'
 import { StaticImage } from 'gatsby-plugin-image'
 import Lottie from 'react-lottie-player'
@@ -15,6 +15,22 @@ import ChevronUpIcon from 'assets/svgs/chevron-up.svg'
 import WSCLogoIcon from 'assets/svgs/wsc--logo.svg'
 
 const IndexPage = () => {
+  const [isMobileView, setIsMobileView] = useState(false)
+
+  useEffect(() => {
+    const onResize = () => {
+      setIsMobileView(window.innerWidth < 960)
+    }
+
+    window.addEventListener('resize', onResize)
+
+    onResize()
+
+    return () => {
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
+
   return (
     <div id='home'>
       <Header />
@@ -46,7 +62,11 @@ const IndexPage = () => {
                 </p>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/proto/SGaHnjLDY0YqAdHXYa4lRW/wsc?page-id=0%3A1&node-id=603%3A3687&viewport=-1659%2C129%2C0.03&scaling=scale-down&starting-point-node-id=603%3A3687&show-proto-sidebar=1'
+                  href={
+                    isMobileView
+                      ? 'https://www.figma.com/proto/3k7fVlUEpWXsApq6wJmSvp/WSC-mobile?page-id=0%3A1&node-id=17%3A215&viewport=1538%2C1286%2C1&scaling=min-zoom&starting-point-node-id=17%3A215'
+                      : 'https://www.figma.com/proto/SGaHnjLDY0YqAdHXYa4lRW/wsc?page-id=0%3A1&node-id=603%3A3687&viewport=-1659%2C129%2C0.03&scaling=scale-down&starting-point-node-id=603%3A3687&show-proto-sidebar=1'
+                  }
                 >
                   Explore
                 </Button>
@@ -92,7 +112,11 @@ const IndexPage = () => {
                 </div>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/proto/rpCUThimqewIKmUfqNTmWV/Reflect?page-id=0%3A1&node-id=499%3A38469&viewport=-1750%2C680%2C0.07&scaling=min-zoom&starting-point-node-id=398%3A78309&show-proto-sidebar=1'
+                  href={
+                    isMobileView
+                      ? 'https://www.figma.com/proto/4kKVXvJNP1PP95QBAMoUWY/reflect-mobile?page-id=0%3A1&node-id=5%3A1303&viewport=408%2C709%2C0.12&scaling=min-zoom&starting-point-node-id=3%3A77&show-proto-sidebar=1'
+                      : 'https://www.figma.com/proto/rpCUThimqewIKmUfqNTmWV/Reflect?page-id=0%3A1&node-id=499%3A38469&viewport=-1750%2C680%2C0.07&scaling=min-zoom&starting-point-node-id=398%3A78309&show-proto-sidebar=1'
+                  }
                 >
                   Explore
                 </Button>
@@ -123,7 +147,11 @@ const IndexPage = () => {
                 </p>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=min-zoom&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
+                  href={
+                    isMobileView
+                      ? 'https://www.figma.com/proto/ZAB786ft2hnIEZIerZJWov/Slowdown--mobile?page-id=0%3A1&node-id=12%3A1388&viewport=-28%2C7059%2C0.08&scaling=min-zoom&starting-point-node-id=12%3A1388&show-proto-sidebar=1'
+                      : 'https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=min-zoom&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
+                  }
                 >
                   Explore
                 </Button>

@@ -1,14 +1,17 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import './home.scss'
 import { StaticImage } from 'gatsby-plugin-image'
+import Lottie from 'react-lottie-player'
 import Layout from 'components/Layout/Layout'
 import Header from 'components/Header/Header'
 import Button from 'components/Button/Button'
 import Footer from 'components/Footer/Footer'
+import ShlaggerGIF from 'images/shlagger.gif'
 import FoodIcons from 'assets/svgs/food-icons.svg'
 import GuitarIcon from 'assets/svgs/guitar.svg'
 import SaxIcon from 'assets/svgs/sax.svg'
 import ChevronUpIcon from 'assets/svgs/chevron-up.svg'
+import WSCLogoIcon from 'assets/svgs/wsc--logo.svg'
 
 const IndexPage = () => {
   return (
@@ -42,7 +45,7 @@ const IndexPage = () => {
                 </p>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                  href='https://www.figma.com/proto/SGaHnjLDY0YqAdHXYa4lRW/wsc?page-id=0%3A1&node-id=603%3A3687&viewport=-1659%2C129%2C0.03&scaling=scale-down&starting-point-node-id=603%3A3687&show-proto-sidebar=1'
                 >
                   Explore
                 </Button>
@@ -83,7 +86,7 @@ const IndexPage = () => {
                 </div>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                  href='https://www.figma.com/proto/rpCUThimqewIKmUfqNTmWV/Reflect?page-id=0%3A1&node-id=499%3A38469&viewport=-1750%2C680%2C0.07&scaling=min-zoom&starting-point-node-id=398%3A78309&show-proto-sidebar=1'
                 >
                   Explore
                 </Button>
@@ -118,7 +121,7 @@ const IndexPage = () => {
                 </p>
                 <Button
                   className='home--project--button'
-                  href='https://www.figma.com/file/V1aCHdWX6DU7yPRQ6Ucqei/portfolio?node-id=0%3A1'
+                  href='https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=min-zoom&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
                 >
                   Explore
                 </Button>
@@ -151,20 +154,56 @@ const IndexPage = () => {
         <div id='logos-and-icons'>
           <Layout>
             <h2 className='primary-title'>Logos & Icons</h2>
-            <div className='landI--grid'>
-              <div></div>
-              <div></div>
-              <div className='landI--grid--food-icons'>
+            <div className='showcase--grid'>
+              <div>
+                <StaticImage
+                  src='../images/levinski--tshirts.jpg'
+                  alt='levinski project t-shirts'
+                  layout='fullWidth'
+                  placeholder='blurred'
+                  style={{ width: '100%', height: '100%' }}
+                  quality={100}
+                />
+              </div>
+              <div style={{ overflow: 'hidden' }}>
+                <Lottie
+                  path='https://assets8.lottiefiles.com/packages/lf20_yqgkwlha.json'
+                  play
+                  style={{ height: '120%' }}
+                  rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                />
+              </div>
+              <div className='showcase--grid--food-icons'>
                 <FoodIcons />
               </div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div className='landI--grid--guitar-icon'>
+              <div className='showcase--grid--changing-icons'>
+                <Lottie
+                  path='https://assets5.lottiefiles.com/packages/lf20_ssax7uin.json'
+                  play
+                  style={{ height: '80%' }}
+                  rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                />
+              </div>
+              <div className='showcase--grid--wsc'>
+                <WSCLogoIcon />
+              </div>
+              <div className='showcase--grid--shlagger'>
+                <img src={ShlaggerGIF} alt='shlagger logo' loading='lazy' />
+              </div>
+              <div className='showcase--grid--guitar-icon'>
                 <GuitarIcon />
               </div>
-              <div></div>
-              <div className='landI--grid--sax-icon'>
+              <div>
+                <StaticImage
+                  src='../images/mockup-bags.jpg'
+                  alt='mockup bags project'
+                  layout='fullWidth'
+                  placeholder='blurred'
+                  style={{ width: '100%', height: '100%' }}
+                  quality={100}
+                />
+              </div>
+              <div className='showcase--grid--sax-icon'>
                 <SaxIcon />
               </div>
             </div>

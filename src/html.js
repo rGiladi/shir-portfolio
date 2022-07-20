@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;700&family=Montserrat:wght@300;400&display=swap" />
-
+    
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

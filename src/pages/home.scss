@@ -28,8 +28,8 @@
     z-index: 1;
 
     @include tablet {
-      margin-block-start: 4rem;
-      margin-block-end: 8rem;
+      margin-block-start: 2rem;
+      margin-block-end: 4rem;
     }
 
     .home--hero--title {
@@ -60,6 +60,9 @@
       line-height: 4.59rem;
 
       @include tablet {
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 2.4rem;
         line-height: 3.06rem;
       }
@@ -80,8 +83,8 @@
   .home--hero--vector-mobile {
     display: none;
     position: relative;
-    right: -25%;
-    min-width: 45rem;
+    right: -30%;
+    min-width: 42rem;
     max-width: 55rem;
 
     @include tablet {
@@ -231,7 +234,7 @@
     }
   }
 
-  .landI--grid {
+  .showcase--grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 30.7rem);
@@ -259,7 +262,7 @@
     }
 
     & > :nth-child(1) {
-      background: $pastel-green;
+      background: #e3f6f4;
     }
 
     & > :nth-child(2) {
@@ -313,19 +316,27 @@
       }
     }
 
-    & .landI--grid--food-icons {
+    & .showcase--grid--food-icons {
       & > svg {
         width: 90%;
       }
     }
 
-    & .landI--grid--guitar-icon {
+    & .showcase--grid--shlagger {
+      overflow: hidden;
+
+      & > img {
+        height: 90%;
+      }
+    }
+
+    & .showcase--grid--guitar-icon {
       & > svg {
         height: 70%;
       }
     }
 
-    & .landI--grid--sax-icon {
+    & .showcase--grid--sax-icon {
       & > svg {
         height: 60%;
       }

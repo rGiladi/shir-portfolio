@@ -13,7 +13,6 @@ const Header = (props: HeaderProps) => {
           <strong>V</strong>
         </div>
         <nav>
-          <a href='#projects'>Projects</a>
           <a href='#contact'>Contact</a>
         </nav>
       </header>

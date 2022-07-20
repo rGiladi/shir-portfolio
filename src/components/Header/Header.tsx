@@ -1,6 +1,7 @@
 import React from 'react'
-import Layout from 'components/Layout/Layout'
 import './header.scss'
+import Layout from 'components/Layout/Layout'
+import ContactBtn from 'assets/svgs/contact-btn.svg'
 
 interface HeaderProps {}
 
@@ -10,10 +11,13 @@ const Header = (props: HeaderProps) => {
       <header>
         <div className='logo'>
           <span>S</span>
-          <strong>V</strong>
+          <strong>V.</strong>
         </div>
         <nav>
-          <a href='#contact'>Contact</a>
+          <a className='contact-btn' href='#contact'>
+            <ContactBtn />
+            <span>Contact</span>
+          </a>
         </nav>
       </header>
     </Layout>

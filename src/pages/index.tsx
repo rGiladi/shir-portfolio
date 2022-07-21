@@ -133,6 +133,7 @@ const IndexPage = () => {
                   className='home--project--reflect-phones'
                   src={reflectPhones}
                   alt='reflect project asset - mock phones'
+                  loading='lazy'
                 />
               </div>
             </section>

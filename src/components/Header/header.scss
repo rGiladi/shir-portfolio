@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 82px;
 
   .logo {
     font-family: var(--ff-primary);
@@ -39,6 +39,17 @@ header {
   .contact-btn {
     position: relative;
     display: block;
+
+    &:hover {
+      & svg {
+        color: #9747ff;
+      }
+    }
+
+    & svg {
+      transition: color 0.1s ease;
+      color: #191a25;
+    }
 
     & span {
       position: absolute;

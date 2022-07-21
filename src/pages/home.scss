@@ -28,7 +28,7 @@
     z-index: 1;
 
     @include tablet {
-      margin-block-start: 2rem;
+      margin-block-start: 4rem;
       margin-block-end: 6rem;
     }
 
@@ -40,7 +40,7 @@
 
       @include tablet {
         margin-block-end: 1.5rem;
-        font-size: 4.8rem;
+        font-size: 4rem;
       }
 
       & > span:first-child {
@@ -62,7 +62,7 @@
         width: 30rem;
         margin-left: auto;
         margin-right: auto;
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 3.06rem;
       }
     }
@@ -82,22 +82,26 @@
   .home--hero--vector-mobile {
     display: none;
     position: relative;
-    left: 11rem;
+    left: 12rem;
     width: auto;
     height: 42rem;
     margin: 0 auto;
+
+    @include mobile {
+      height: 38rem;
+      left: 23%;
+    }
 
     @include tablet {
       display: block;
     }
   }
 
-  & .home--hero--vector,
-  & .home--hero--vector-mobile {
+  & .home--hero--vector {
     & > path {
       stroke-dasharray: 3000;
       stroke-dashoffset: -3000;
-      animation: hero-line 2s linear forwards;
+      animation: hero-line 2s ease-in-out forwards;
     }
 
     @keyframes hero-line {

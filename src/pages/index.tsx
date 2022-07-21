@@ -35,7 +35,7 @@ const IndexPage = () => {
     <div id='home'>
       <Header />
       <main>
-        <div className='home--hero'>
+        <div id='hero' className='home--hero'>
           <Layout>
             <div className='home--hero--title-container'>
               <h1 className='home--hero--title'>

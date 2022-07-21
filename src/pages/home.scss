@@ -101,7 +101,7 @@
     & > path {
       stroke-dasharray: 3000;
       stroke-dashoffset: -3000;
-      animation: hero-line 2s ease-in-out forwards;
+      animation: hero-line 1s ease-in-out forwards;
     }
 
     @keyframes hero-line {

@@ -13,6 +13,12 @@ const config: GatsbyConfig = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/favicon.png'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-sharp',
       options: {
         defaults: {

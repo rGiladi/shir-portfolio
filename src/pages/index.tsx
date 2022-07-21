@@ -115,7 +115,7 @@ const IndexPage = () => {
                   href={
                     isMobileView
                       ? 'https://www.figma.com/proto/4kKVXvJNP1PP95QBAMoUWY/reflect-mobile?page-id=0%3A1&node-id=5%3A1303&viewport=408%2C709%2C0.12&scaling=min-zoom&starting-point-node-id=3%3A77&show-proto-sidebar=1'
-                      : 'https://www.figma.com/proto/rpCUThimqewIKmUfqNTmWV/Reflect?page-id=0%3A1&node-id=499%3A38469&viewport=-1750%2C680%2C0.07&scaling=min-zoom&starting-point-node-id=398%3A78309&show-proto-sidebar=1'
+                      : 'https://www.figma.com/proto/rpCUThimqewIKmUfqNTmWV/Reflect?page-id=0%3A1&node-id=499%3A38469&viewport=-1750%2C680%2C0.07&scaling=scale-down&starting-point-node-id=398%3A78309&show-proto-sidebar=1'
                   }
                 >
                   Explore
@@ -151,7 +151,7 @@ const IndexPage = () => {
                   href={
                     isMobileView
                       ? 'https://www.figma.com/proto/ZAB786ft2hnIEZIerZJWov/Slowdown--mobile?page-id=0%3A1&node-id=12%3A1388&viewport=-28%2C7059%2C0.08&scaling=min-zoom&starting-point-node-id=12%3A1388&show-proto-sidebar=1'
-                      : 'https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=min-zoom&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
+                      : 'https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=scale-down&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
                   }
                 >
                   Explore

@@ -43,7 +43,7 @@ const IndexPage = () => {
                 <span>Voldman</span>
               </h1>
               <p className='home--hero--description'>
-                A visual designer specializes in UI/UX
+                A visual designer specializes in UX/UI
               </p>
             </div>
             <HeroVector />

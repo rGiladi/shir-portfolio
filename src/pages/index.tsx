@@ -52,6 +52,49 @@ const IndexPage = () => {
         </div>
         <div id='projects'>
           <Layout>
+            <section className='home--project home--project--slowdown'>
+              <div className='home--project--content-container'>
+                <h2 className='primary-title'>Slowdown</h2>
+                <p className='primary-text'>
+                  A website with one goal in mind - to lower everyone's stress
+                  level. It includes articles about mind & body health.
+                </p>
+                <Button
+                  className='home--project--button'
+                  href={
+                    isMobileView
+                      ? 'https://www.figma.com/proto/ZAB786ft2hnIEZIerZJWov/Slowdown--mobile?page-id=0%3A1&node-id=12%3A1388&viewport=-28%2C7059%2C0.08&scaling=min-zoom&starting-point-node-id=12%3A1388&show-proto-sidebar=1'
+                      : 'https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=scale-down&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
+                  }
+                >
+                  Explore
+                </Button>
+              </div>
+              <div className='home--project--asset-container'>
+                <StaticImage
+                  className='home--project--slowdown--mobile-asset'
+                  src='../images/slowdown--mockup-mobile.png'
+                  alt='slowdown project asset - mobile phones mockups'
+                  layout='fixed'
+                  placeholder='tracedSVG'
+                  width={400}
+                  height={749}
+                  quality={100}
+                />
+                <StaticImage
+                  className='home--project--slowdown--desktop-asset'
+                  src='../images/slowdown--mockup.png'
+                  alt='slowdown project asset - mobile phones mockups'
+                  layout='fixed'
+                  placeholder='tracedSVG'
+                  width={540}
+                  height={1247}
+                  quality={100}
+                />
+              </div>
+            </section>
+          </Layout>
+          <Layout>
             <section className='home--project home--project--wsc'>
               <div className='home--project--content-container'>
                 <h2 className='primary-title'>WSC</h2>
@@ -89,7 +132,7 @@ const IndexPage = () => {
               </div>
             </section>
           </Layout>
-          <Layout>
+          {/* <Layout>
             <section className='home--project home--project--reflect'>
               <div className='home--project--content-container'>
                 <h2 className='primary-title'>Reflect</h2>
@@ -137,50 +180,7 @@ const IndexPage = () => {
                 />
               </div>
             </section>
-          </Layout>
-          <Layout>
-            <section className='home--project home--project--slowdown'>
-              <div className='home--project--content-container'>
-                <h2 className='primary-title'>Slowdown</h2>
-                <p className='primary-text'>
-                  A website with one goal in mind - to lower everyone's stress
-                  level. It includes articles about mind & body health.
-                </p>
-                <Button
-                  className='home--project--button'
-                  href={
-                    isMobileView
-                      ? 'https://www.figma.com/proto/ZAB786ft2hnIEZIerZJWov/Slowdown--mobile?page-id=0%3A1&node-id=12%3A1388&viewport=-28%2C7059%2C0.08&scaling=min-zoom&starting-point-node-id=12%3A1388&show-proto-sidebar=1'
-                      : 'https://www.figma.com/proto/5oaZza2StUJ942HAv1czoS/Slowdown-desktop?page-id=0%3A1&node-id=39%3A1872&viewport=440%2C257%2C0.07&scaling=scale-down&starting-point-node-id=39%3A1872&show-proto-sidebar=1'
-                  }
-                >
-                  Explore
-                </Button>
-              </div>
-              <div className='home--project--asset-container'>
-                <StaticImage
-                  className='home--project--slowdown--mobile-asset'
-                  src='../images/slowdown--mockup-mobile.png'
-                  alt='slowdown project asset - mobile phones mockups'
-                  layout='fixed'
-                  placeholder='tracedSVG'
-                  width={400}
-                  height={749}
-                  quality={100}
-                />
-                <StaticImage
-                  className='home--project--slowdown--desktop-asset'
-                  src='../images/slowdown--mockup.png'
-                  alt='slowdown project asset - mobile phones mockups'
-                  layout='fixed'
-                  placeholder='tracedSVG'
-                  width={540}
-                  height={1247}
-                  quality={100}
-                />
-              </div>
-            </section>
-          </Layout>
+          </Layout> */}
         </div>
         <div id='logos-and-icons'>
           <Layout>
